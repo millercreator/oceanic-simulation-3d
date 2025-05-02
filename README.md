@@ -1,36 +1,73 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Oceanic Simulation 3D
+
+An immersive underwater submarine exploration simulation built with Next.js and Babylon.js. Experience realistic submarine physics, water environments, and the challenges of navigating the mysterious depths of a vast procedurally generated ocean.
+
+## Features
+
+- Realistic submarine physics with momentum, inertia, and buoyancy
+- Immersive underwater environment with dynamic water effects
+- First-person (cockpit) and third-person viewing modes
+- Resource management (oxygen, fuel, power)
+- Intuitive submarine controls with keyboard and UI panels
+- Scalable Entity Component System architecture
+
+## Tech Stack
+
+- [Next.js](https://nextjs.org/) - React framework
+- [Babylon.js](https://www.babylonjs.com/) - 3D engine
+- [TypeScript](https://www.typescriptlang.org/) - Type safety
+- [TailwindCSS](https://tailwindcss.com/) - Styling
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- Node.js 20.x or higher
+- npm or yarn
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Installation
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. Clone the repository:
+   ```
+   git clone <repository-url>
+   cd oceanic-simulation-3d
+   ```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+2. Install dependencies:
+   ```
+   npm install
+   # or
+   yarn install
+   ```
 
-## Learn More
+3. Run the development server:
+   ```
+   npm run dev
+   # or
+   yarn dev
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Controls
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **W/S**: Forward/backward throttle
+- **A/D**: Rudder left/right
+- **Q/E**: Ballast control (sink/rise)
+- **Space**: Emergency surface
+- **Tab**: Toggle between first-person and third-person views
 
-## Deploy on Vercel
+## Project Structure
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- `/src/components`: React components
+  - `/submarine`: Submarine-related components
+  - `/environment`: Water and environment components
+  - `/ui`: User interface components
+- `/src/systems`: Game systems (physics, events, state)
+- `/src/utils`: Utility functions
+- `/src/shaders`: Custom GLSL shaders (for advanced water effects)
+- `/src/assets`: 3D models, textures, and audio files
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## License
+
+MIT
